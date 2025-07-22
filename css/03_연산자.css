@@ -9,3 +9,13 @@
   display: flex;
   margin-top: 10px;
 }
+.btn-row > button {
+  height: 30px;
+  margin: 0 5px;
+  flex-grow: 1;
+  font-size: 20px;
+  font-weight: bold;
+}
+#계산결과 {
+  color: red;
+}
