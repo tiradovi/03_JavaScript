@@ -3,7 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JavaScript 개요</title>
+    <title>01_JS개요</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Script 언어란?</h1>
+    <pre>
+      기본 프로그램의 동작을 사용자의 요구에
+      맞게 수행되도록 해주는 용도의 언어
+
+      별도의 소스코드 컴파일(이진수 번역)을 하지 않고
+      Interperter(인터프리터, 한 줄씩 코드를 읽어서 해석하는 기계)를
+      이용해서 바로 코드 실행
+
+      장점: 컴파일 소요시간 없음
+      단점: 프로그램 실행시간이 상대적으로 느림
+    </pre>
+    <h1>JavaScript란?</h1>
+    <pre>
+      웹 브라우저(크롬, 엣지, 웨일, 파이어폭스 등)에서 주로 
+      사용하는 인터프리터 방식의 객체 지향 프로그래밍 언어
+      ECMA Script 표준을 따르는 대표적인 웹 기술
+      (JS 버전 이름 : ES5, ES6, ES7, ...)
+    </pre>
+    <hr />
+    <h1>JavaScript 코드 작성 방법</h1>
+    <ol>
+      <li>브라우저 개발자도구 -> console 직접 작성</li>
+      <li>
+        HTML 내부에 script 태그를 이용해서 작성(Internal)<br />
+        <!-- 버튼이 클릭되었을 때 internalFn() 함수를 호출(실행) -->
+        <button type="button" onclick="internalFn()">Internal 방식 확인</button>
+        <script>
+          // <script> 태그를 작성하는 순간부터 javaScript 언어를 작성가능
+          //한줄 주석
+          /*
+          script 범위 태그 주석: JS 코드를 주석으로 작성할 수 있고,
+          설명이나 표기 작성 가능
+          */
+
+          // function : 함수, 기능
+          /*
+          fuction 함수이름(매개변수 자리){
+          기능에 대해서 작성하는 공간!
+          }
+          */
+        </script>
+      </li>
+    </ol>
+  </body>
 </html>
