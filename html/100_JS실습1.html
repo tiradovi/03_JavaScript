@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript 기초 실습</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        padding: 20px;
+      }
+      .section {
+        margin: 30px 0;
+        padding: 20px;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+      }
+      button {
+        font-size: 16px;
+        padding: 10px 15px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      input {
+        font-size: 16px;
+        padding: 8px;
+        margin: 5px;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+      }
+      .output {
+        margin: 10px 0;
+        padding: 10px;
+        background-color: #e7f3ff;
+        border-radius: 5px;
+        border: 1px solid #b3d9ff;
+      }
+      pre {
+        background-color: #f4f4f4;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🎯 JavaScript 기초 실습 문제</h1>
+
+    <div class="section">
+      <h2>문제 1: 기본 알림창 띄우기</h2>
+      <p><strong>목표:</strong> 버튼을 클릭하면 알림창이 나타나게 하세요.</p>
+      <button type="button" onclick="첫번째함수()">클릭해보세요!</button>
+
+      <h3>💡 힌트:</h3>
+      <pre>
+function 첫번째함수() {
+    alert("메시지를 여기에 작성하세요!");
+}
+        </pre
+      >
+    </div>
+
+    <div class="section">
+      <h2>문제 2: 텍스트 변경하기</h2>
+      <p>
+        <strong>목표:</strong> 버튼을 클릭하면 아래 텍스트가 변경되게 하세요.
+      </p>
+      <button type="button" onclick="텍스트변경()">텍스트 바꾸기</button>
+      <div id="메시지영역" class="output">여기 텍스트가 바뀔 예정입니다.</div>
+
+      <h3>💡 힌트:</h3>
+      <pre>
+function 텍스트변경() {
+    document.getElementById("메시지영역").innerHTML = "새로운 메시지!";
+}
+        </pre
+      >
+    </div>
+
+    <div class="section">
+      <h2>문제 3: 배경색 변경하기</h2>
+      <p>
+        <strong>목표:</strong> 각 버튼을 클릭하면 페이지 배경색이 바뀌게 하세요.
+      </p>
+      <button type="button" onclick="배경색변경('pink')">분홍색</button>
+      <button type="button" onclick="배경색변경('lightgreen')">연두색</button>
+      <button type="button" onclick="배경색변경('lightyellow')">노란색</button>
+      <button type="button" onclick="배경색변경('white')">원래색</button>
+
+      <h3>💡 힌트:</h3>
+      <pre>
+const 몸체 = document.querySelector("body");
+
+function 배경색변경(색상) {
+    몸체.style.backgroundColor = 색상;
+}
+        </pre
+      >
+    </div>
+
+    <div class="section">
+      <h2>문제 4: 이름 입력받고 인사하기</h2>
+      <p>
+        <strong>목표:</strong> 이름을 입력하고 버튼을 클릭하면 개인화된 인사말이
+        나타나게 하세요.
+      </p>
+      <input type="text" id="이름입력" placeholder="이름을 입력하세요" />
+      <button type="button" onclick="인사하기()">인사하기</button>
+      <div id="인사결과" class="output"></div>
+
+      <h3>💡 힌트:</h3>
+      <pre>
+function 인사하기() {
+    let 이름 = document.getElementById("이름입력").value;
+    document.getElementById("인사결과").innerHTML = "안녕하세요, " + 이름 + "님!";
+}
+        </pre
+      >
+    </div>
+
+    <div class="section">
+      <h2>문제 5: 간단한 계산기</h2>
+      <p><strong>목표:</strong> 두 숫자를 입력받아서 계산 결과를 보여주세요.</p>
+      <input type="number" id="숫자1" placeholder="첫 번째 숫자" />
+      <input type="number" id="숫자2" placeholder="두 번째 숫자" />
+      <br /><br />
+      <button type="button" onclick="계산하기('+')">더하기</button>
+      <button type="button" onclick="계산하기('-')">빼기</button>
+      <button type="button" onclick="계산하기('*')">곱하기</button>
+      <div id="계산결과" class="output"></div>
+
+      <h3>💡 힌트:</h3>
+      <pre>
+function 계산하기(연산자) {
+    let 첫번째 = Number(document.getElementById("숫자1").value);
+    let 두번째 = Number(document.getElementById("숫자2").value);
+    let 결과 = 0;
+    
+    if (연산자 === '+') {
+        결과 = 첫번째 + 두번째;
+    } else if (연산자 === '-') {
+        결과 = 첫번째 - 두번째;
+    } else if (연산자 === '*') {
+        결과 = 첫번째 * 두번째;
+    }
+    
+    document.getElementById("계산결과").innerHTML = 
+        첫번째 + " " + 연산자 + " " + 두번째 + " = " + 결과;
+}
+        </pre
+      >
+    </div>
+
+    <div class="section">
+      <h2>문제 6: 이미지 크기 조절하기</h2>
+      <p>
+        <strong>목표:</strong> 버튼을 클릭하면 이미지 크기가 변경되게 하세요.
+      </p>
+      <img
+        id="조절이미지"
+        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjNDI4NWY0Ii8+CiAgPHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+7IOY7ZiUIOydtOuvuOyngDwvdGV4dD4KICA8L3N2Zz4K"
+        alt="샘플 이미지"
+      />
+      <br /><br />
+      <button type="button" onclick="이미지크기조절('100px')">작게</button>
+      <button type="button" onclick="이미지크기조절('200px')">보통</button>
+      <button type="button" onclick="이미지크기조절('300px')">크게</button>
+
+      <h3>💡 힌트:</h3>
+      <pre>
+function 이미지크기조절(크기) {
+    document.getElementById("조절이미지").style.width = 크기;
+    document.getElementById("조절이미지").style.height = 크기;
+}
+        </pre
+      >
+    </div>
+
+    <div class="section">
+      <h2>문제 7: 글자 스타일 변경하기</h2>
+      <p>
+        <strong>목표:</strong> 버튼을 클릭하면 아래 텍스트의 스타일이 변경되게
+        하세요.
+      </p>
+      <div id="스타일텍스트" class="output">이 텍스트의 스타일이 바뀝니다!</div>
+      <button type="button" onclick="글자스타일변경('red', '30px', 'bold')">
+        빨간색 크게
+      </button>
+      <button type="button" onclick="글자스타일변경('blue', '20px', 'normal')">
+        파란색 보통
+      </button>
+      <button type="button" onclick="글자스타일변경('green', '15px', 'italic')">
+        초록색 기울임
+      </button>
+
+      <h3>💡 힌트:</h3>
+      <pre>
+function 글자스타일변경(색상, 크기, 굵기) {
+    let 요소 = document.getElementById("스타일텍스트");
+    요소.style.color = 색상;
+    요소.style.fontSize = 크기;
+    요소.style.fontWeight = 굵기;
+}
+        </pre
+      >
+    </div>
+
+    <div class="section">
+      <h2>문제 8: 현재 시간 보여주기</h2>
+      <p><strong>목표:</strong> 버튼을 클릭하면 현재 시간이 나타나게 하세요.</p>
+      <button type="button" onclick="시간보여주기()">현재 시간 확인</button>
+      <div id="시간표시" class="output"></div>
+
+      <h3>💡 힌트:</h3>
+      <pre>
+function 시간보여주기() {
+    let 지금 = new Date();
+    let 시간정보 = 지금.getFullYear() + "년 " + 
+                 (지금.getMonth() + 1) + "월 " + 
+                 지금.getDate() + "일 " +
+                 지금.getHours() + "시 " + 
+                 지금.getMinutes() + "분";
+    
+    document.getElementById("시간표시").innerHTML = 시간정보;
+}
+        </pre
+      >
+    </div>
+
+    <div class="section">
+      <h2>문제 9: 숨기기/보이기 기능</h2>
+      <p>
+        <strong>목표:</strong> 버튼을 클릭하면 아래 박스가 사라졌다 나타났다
+        하게 하세요.
+      </p>
+      <button type="button" onclick="토글기능()">숨기기/보이기</button>
+      <div id="토글박스" class="output">👋 안녕하세요! 저를 숨겨보세요!</div>
+
+      <h3>💡 힌트:</h3>
+      <pre>
+let 보임상태 = true;
+
+function 토글기능() {
+    let 박스 = document.getElementById("토글박스");
+    
+    if (보임상태 === true) {
+        박스.style.display = "none";
+        보임상태 = false;
+    } else {
+        박스.style.display = "block";
+        보임상태 = true;
+    }
+}
+        </pre
+      >
+    </div>
+
+    <div class="section">
+      <h2>문제 10: 색상 맞추기 미니게임</h2>
+      <p>
+        <strong>목표:</strong> 제시된 색상과 같은 버튼을 클릭하는 게임을
+        만드세요.
+      </p>
+      <div id="게임문제" class="output">
+        🎯 빨간색 버튼을 찾아서 클릭하세요!
+      </div>
+      <button
+        type="button"
+        onclick="게임체크('red')"
+        style="background-color: red"
+      >
+        빨간색
+      </button>
+      <button
+        type="button"
+        onclick="게임체크('blue')"
+        style="background-color: blue"
+      >
+        파란색
+      </button>
+      <button
+        type="button"
+        onclick="게임체크('green')"
+        style="background-color: green"
+      >
+        초록색
+      </button>
+      <div id="게임결과" class="output"></div>
+
+      <h3>💡 힌트:</h3>
+      <pre>
+let 정답색상 = "red";
+
+function 게임체크(선택색상) {
+    if (선택색상 === 정답색상) {
+        document.getElementById("게임결과").innerHTML = "🎉 정답입니다!";
+    } else {
+        document.getElementById("게임결과").innerHTML = "❌ 틀렸습니다. 다시 시도해보세요!";
+    }
+}
+        </pre
+      >
+    </div>
+
+    <script>
+      // 이 부분에 위의 모든 함수들을 작성해보세요!
+      // 각 문제의 힌트를 참고해서 함수들을 만들어보세요.
+
+      // 문제 1
+      function 첫번째함수() {
+        alert("안녕하세요! 첫 번째 함수가 실행되었습니다!");
+      }
+
+      // 문제 2
+      function 텍스트변경() {
+        document.getElementById("메시지영역").innerHTML =
+          "🎉 텍스트가 성공적으로 변경되었습니다!";
+      }
+
+      // 문제 3
+      const 몸체 = document.querySelector("body");
+      function 배경색변경(색상) {
+        몸체.style.backgroundColor = 색상;
+      }
+
+      // 문제 4
+      function 인사하기() {
+        let 이름 = document.getElementById("이름입력").value;
+        if (이름 === "") {
+          document.getElementById("인사결과").innerHTML =
+            "이름을 입력해주세요!";
+        } else {
+          document.getElementById("인사결과").innerHTML =
+            "안녕하세요, " + 이름 + "님! 반가워요! 😊";
+        }
+      }
+
+      // 문제 5
+      function 계산하기(연산자) {
+        let 첫번째 = Number(document.getElementById("숫자1").value);
+        let 두번째 = Number(document.getElementById("숫자2").value);
+        let 결과 = 0;
+
+        if (연산자 === "+") {
+          결과 = 첫번째 + 두번째;
+        } else if (연산자 === "-") {
+          결과 = 첫번째 - 두번째;
+        } else if (연산자 === "*") {
+          결과 = 첫번째 * 두번째;
+        }
+
+        document.getElementById("계산결과").innerHTML =
+          첫번째 + " " + 연산자 + " " + 두번째 + " = " + 결과;
+      }
+
+      // 문제 6
+      function 이미지크기조절(크기) {
+        document.getElementById("조절이미지").style.width = 크기;
+        document.getElementById("조절이미지").style.height = 크기;
+      }
+
+      // 문제 7
+      function 글자스타일변경(색상, 크기, 굵기) {
+        let 요소 = document.getElementById("스타일텍스트");
+        요소.style.color = 색상;
+        요소.style.fontSize = 크기;
+        요소.style.fontWeight = 굵기;
+      }
+
+      // 문제 8
+      function 시간보여주기() {
+        let 지금 = new Date();
+        let 시간정보 =
+          지금.getFullYear() +
+          "년 " +
+          (지금.getMonth() + 1) +
+          "월 " +
+          지금.getDate() +
+          "일 " +
+          지금.getHours() +
+          "시 " +
+          지금.getMinutes() +
+          "분 " +
+          지금.getSeconds() +
+          "초";
+
+        document.getElementById("시간표시").innerHTML = "⏰ " + 시간정보;
+      }
+
+      // 문제 9
+      let 보임상태 = true;
+      function 토글기능() {
+        let 박스 = document.getElementById("토글박스");
+
+        if (보임상태 === true) {
+          박스.style.display = "none";
+          보임상태 = false;
+        } else {
+          박스.style.display = "block";
+          보임상태 = true;
+        }
+      }
+
+      // 문제 10
+      let 정답색상 = "red";
+      function 게임체크(선택색상) {
+        if (선택색상 === 정답색상) {
+          document.getElementById("게임결과").innerHTML =
+            "🎉 정답입니다! 빨간색이 맞아요!";
+        } else {
+          document.getElementById("게임결과").innerHTML =
+            "❌ 틀렸습니다. 빨간색을 찾아보세요!";
+        }
+      }
+    </script>
+  </body>
+</html>
