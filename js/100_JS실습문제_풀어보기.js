@@ -38,11 +38,9 @@ function 계산하기(operator) {
 
   if (operator == "+") {
     result = number1 + number2;
-  }
-  if (operator == "-") {
+  } else if (operator == "-") {
     result = number1 - number2;
-  }
-  if (operator == "*") {
+  } else if (operator == "*") {
     result = number1 * number2;
   }
   culresult.innerHTML = number1 + operator + number2 + "=" + result;

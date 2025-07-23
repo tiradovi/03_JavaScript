@@ -40,6 +40,34 @@
     <h4>입력받은 수가 양수인지 아닌지 검사</h4>
     <input type="number" id="input2" />
     <button type="button" onclick="체크2()">양수인지 아닌지 검사</button>
+
+    <h1>if - else if - else</h1>
+    <pre>
+        <code>
+            if(조건식1){
+                조건식1이 true일 경우 실행할 코드;
+            }else if(조건식2){
+                조건식1이 false이면서
+                조건식이 true인 경우
+            } else{
+               모든 if, else if 조건식이 false인 경우 실행할 코드
+            }
+        </code>
+        else if 구문은 원하는 만큼 작성이 가능
+        앞선 if/ else if 문 조건이 false인 경우 해당범위 제외
+    </pre>
+
+    <h3>어린이, 청소년, 성인 구분하기</h3>
+    <pre>
+        나이를 입력 받아 
+        0세  ~ 13세  : 어린이
+        14세 ~ 19세  : 청소년
+        20세 ~ 150세 : 성인
+        0미만 150과  : 잘못 입력하셨습니다.
+        미입력 : 값을 입력해주세요
+    </pre>
+    나이 : <input type="number" id="inputAge" />
+    <button onclick="체크4()">확인하기</button>
     <script src="../js/05_조건문.js"></script>
   </body>
 </html>
