@@ -32,8 +32,8 @@ function plusFn() {
   result.innerText = Number(number1) + Number(number2);
 }
 function minusFn() {
-  const number1 = document.getElementById("input1").value;
-  const number2 = document.getElementById("input2").value;
+  const number1 = Number(document.getElementById("input1").value);
+  const number2 = Number(document.getElementById("input2").value);
   document.getElementById("계산결과").innerText = number1 - number2;
 }
 function multiFn() {
