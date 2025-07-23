@@ -40,17 +40,18 @@ function minusFn() {
     */
   const value1 = num1.value;
   const value2 = num2.value;
-  
+  reslt.innerText = Number(value1) - Number(value2);
 }
 function multiFn() {
-  const value1 = num1.value;
-  const value2 = num2.value;
+  const value1 = Number(num1.value);
+  const value2 = Number(num2.value);
+  reslt.innerText = value1 * value2;
 }
 function divFn() {
-  const value1 = num1.value;
-  const value2 = num2.value;
+  reslt.innerText = Number(num1.value) / Number(num2.value);
 }
 function modFn() {
   const value1 = num1.value;
   const value2 = num2.value;
+  reslt.innerText = Number(value1) % Number(value2);
 }

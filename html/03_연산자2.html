@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03_연산자 2</title>
+  </head>
+  <body>
+    <h1>비교 연산자</h1>
+    <!-- (==, !=, >, <, >=, <= ) -->
+    <pre>
+        좌변과 우변을 비교하여 해당하면 true, 아닐 경우 false
+        ==: 같다. 
+        !=: 같지 않다. 
+        > : 초과 
+        < : 미만 
+        >=: 이상 
+        <=: 이하 
+
+        복합 기호시 등호(=)[equal]는 무조건 오른쪽에 작성
+    </pre>
+    <hr />
+    <h3>입력된 두 수가 같은지 확인</h3>
+    <div>
+      <label>
+        1번 :
+        <input type="text" id="comValue1" /><br />
+      </label>
+      <label>
+        2번 :
+        <input type="text" id="comValue2" /><br />
+      </label>
+      <button id="btn1" onclick="비교기능1번()">비교하기</button>
+      <span id="result1"></span>
+    </div>
+
+    <script src="../js/03_연산자2.js"></script>
+  </body>
+</html>

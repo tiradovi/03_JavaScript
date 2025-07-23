@@ -33,7 +33,7 @@ function 계산하기(operator) {
 }
 
 function 이미지크기조절(size) {
-  image = document.getElementById("조절이미지");
-  image.style.width(size);
-  image.style.height(size);
+  image = document.getElementById("조절이미지").value;
+  image.style.width = 100;
+  image.style.height = size;
 }

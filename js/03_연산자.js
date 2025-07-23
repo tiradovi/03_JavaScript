@@ -36,18 +36,3 @@ function minusFn() {
   const number2 = Number(document.getElementById("input2").value);
   document.getElementById("계산결과").innerText = number1 - number2;
 }
-function multiFn() {
-  const number1 = document.getElementById("input1").value;
-  const number2 = document.getElementById("input2").value;
-  document.getElementById("계산결과").innerText = number1 * number2;
-}
-function divFn() {
-  const number1 = document.getElementById("input1").value;
-  const number2 = document.getElementById("input2").value;
-  document.getElementById("계산결과").innerText = number1 / number2;
-}
-function modFn() {
-  const number1 = document.getElementById("input1").value;
-  const number2 = document.getElementById("input2").value;
-  document.getElementById("계산결과").innerText = number1 % number2;
-}
