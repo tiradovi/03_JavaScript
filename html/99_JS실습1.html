@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS 실습1</title>
+  </head>
+  <body>
+    <!-- 문제 1: 기본 알림창 띄우기 -->
+    <h1>문제 1: 기본 알림창 띄우기</h1>
+    <button type="button" onclick="첫번째함수()">클릭해보세요!</button>
+
+    <!-- 문제 2: 텍스트 변경하기 -->
+    <h1>문제 2: 텍스트 변경하기</h1>
+    <button type="button" onclick="텍스트변경()">텍스트 바꾸기</button>
+    <div id="메시지영역">여기 텍스트가 바뀔 예정입니다.</div>
+
+    <!-- 문제 3: 배경색 변경하기 -->
+    <h1>문제 3: 배경색 변경하기</h1>
+    <button type="button" onclick="배경색변경('pink')">분홍색</button>
+    <button type="button" onclick="배경색변경('lightgreen')">연두색</button>
+    <button type="button" onclick="배경색변경('lightyellow')">노란색</button>
+    <button type="button" onclick="배경색변경('white')">원래색</button>
+
+    <!-- 문제 4: 이름 입력받고 인사하기 -->
+    <h1>문제 4: 이름 입력받고 인사하기</h1>
+    <input type="text" id="이름입력" placeholder="이름을 입력하세요" />
+    <button type="button" onclick="인사하기()">인사하기</button>
+    <div id="인사결과"></div>
+
+    <!-- 문제 5: 간단한 계산기 -->
+    <h1>문제 5: 간단한 계산기</h1>
+    <input type="number" id="숫자1" placeholder="첫 번째 숫자" />
+    <input type="number" id="숫자2" placeholder="두 번째 숫자" />
+    <button type="button" onclick="계산하기('+')">더하기</button>
+    <button type="button" onclick="계산하기('-')">빼기</button>
+    <button type="button" onclick="계산하기('*')">곱하기</button>
+    <div id="계산결과"></div>
+
+    <!-- 문제 6: 이미지 크기 조절하기 -->
+    <h1>문제 6: 이미지 크기 조절하기</h1>
+    <img id="조절이미지" src="image.jpg" alt="샘플 이미지" />
+    <button type="button" onclick="이미지크기조절('100px')">작게</button>
+    <button type="button" onclick="이미지크기조절('200px')">보통</button>
+    <button type="button" onclick="이미지크기조절('300px')">크게</button>
+
+    <script src="../js/99_JS실습1.js"></script>
+  </body>
+</html>

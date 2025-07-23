@@ -37,3 +37,37 @@ const number3 = 40;
 //number3 = 50; 값 변경 불가
 
 console.log(number3);
+
+// var의 경우 함수(행동, 기능) 내부에 작성시
+// {} 관계 없이 어디서든 변수이름 호출 가능
+
+function var확인기능() {
+  if (true) {
+    var abc = 10; // 이런 식의 선언은 if 중괄호 내부에서만 abc를 사용하고자
+    //하는 의도
+    abc = 45;
+  }
+  abc = 10; // var abc는 {} 안에서 선언한 내용이 함수내에서도 사용가능
+}
+abc = 20;
+
+function let확인기능() {
+  if (true) {
+    let def = 20;
+    def = 30;
+  }
+  def = 10; // let def는 {} 안에서 선언한 내용은 {}밖에서 사용불가
+}
+def = 20;
+
+function const확인기능() {
+  if (true) {
+    const ghi = 30;
+    ghi = 40;  // 여기서 문제발생 실행중지
+
+    let xyz = 10;
+    xyz = 20;
+  }
+  ghi = 10;
+}
+ghi = 20;

@@ -6,8 +6,6 @@
 //ById          : 아이디가 일치하는
 
 function plusFn() {
-  const number1 = document.getElementById("input1").value;
-  const number2 = document.getElementById("input2").value;
   // "문자열" + 숫자 = "문자열숫자"
   // 코드 실행 중간에 문제 발생시 실행종료
   alert("number1의 값: " + number1);
@@ -36,24 +34,20 @@ function plusFn() {
 function minusFn() {
   const number1 = document.getElementById("input1").value;
   const number2 = document.getElementById("input2").value;
-  const result = document.getElementById("계산결과");
-  result.innerText = Number(number1) - Number(number2);
+  document.getElementById("계산결과").innerText = number1 - number2;
 }
 function multiFn() {
   const number1 = document.getElementById("input1").value;
   const number2 = document.getElementById("input2").value;
-  const result = document.getElementById("계산결과");
-  result.innerText = Number(number1) * Number(number2);
+  document.getElementById("계산결과").innerText = number1 * number2;
 }
 function divFn() {
   const number1 = document.getElementById("input1").value;
   const number2 = document.getElementById("input2").value;
-  const result = document.getElementById("계산결과");
-  result.innerText = Number(number1) / Number(number2);
+  document.getElementById("계산결과").innerText = number1 / number2;
 }
 function modFn() {
   const number1 = document.getElementById("input1").value;
   const number2 = document.getElementById("input2").value;
-  const result = document.getElementById("계산결과");
-  result.innerText = Number(number1) % Number(number2);
+  document.getElementById("계산결과").innerText = number1 % number2;
 }
