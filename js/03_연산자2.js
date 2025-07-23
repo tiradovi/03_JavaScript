@@ -16,6 +16,5 @@ function 비교기능1번() {
 
 ex) '5' ==  5 [true]
 ex) '5' === 5 [false]
-        
 */
 }

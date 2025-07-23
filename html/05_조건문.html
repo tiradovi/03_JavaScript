@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05_조건문</title>
+  </head>
+  <body>
+    <h1>조건문(condition)</h1>
+    <pre>
+        프로그래밍 코드가 해석되는 순서를 제어하는 제어문의 한 종류
+        작성된 조건식에 따라서 수행되는 코드를 변경하는 구문
+    </pre>
+    <hr />
+    <h3>if(만약에..)</h3>
+    <pre>
+        <code>
+            if(조건식){
+                조건식이 true인 경우 실행할 코드;
+            }
+        </code>
+        조건식: 결과가 true, false인 식(연산)
+        조건문: 조건식의 결과에 따라 실행을 제어하는 구문(if, switch) 
+    </pre>
+    <h4>입력받은 수가 양수인지 아닌지 검사</h4>
+    <input type="number" id="input1" />
+    <button type="button" onclick="체크1()">양수인지 검사</button>
+    <hr />
+    <h3>if - else</h3>
+    <pre>
+        <code>
+            if(조건식){
+                조건식이 true일 경우 실행할 코드;
+            }else{
+                if 조건식이 false인 경우 실행할 코드
+            }
+        </code>
+        else : 조건식을 작성하는 () 없음
+    </pre>
+    <h4>입력받은 수가 양수인지 아닌지 검사</h4>
+    <input type="number" id="input2" />
+    <button type="button" onclick="체크2()">양수인지 아닌지 검사</button>
+    <script src="../js/05_조건문.js"></script>
+  </body>
+</html>
