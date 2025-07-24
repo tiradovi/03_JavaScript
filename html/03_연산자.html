@@ -31,6 +31,33 @@
     <div class="row">
       <h2>결과 : <span id="계산결과"></span></h2>
     </div>
+
+    <h3>증가/감소 연산자(++,--)</h3>
+    <pre>
+      - 1씩 값을 증가/감소 시키는 연산자
+      증감연산자라고 부름
+
+      *전위 연산(먼저 1증가 후 계산) : ++변수이름
+      *후위 연산(먼저 계산 후 1증가) : 변수이름++
+      
+      <div>
+        <button onclick="증가버튼()">1씩 증가</button>
+        <span id="result2">0</span>
+        <button onclick="감소버튼()">1씩 감소</button>
+      </div>
+    </pre>
+
+    <h3>전위 연산자(++변수이름)</h3>
+    <p>현재 a 값 : <span id="전위A">5</span></p>
+    <button onclick="전위버튼()">++a 실행</button>
+    <div id="전위결과">결과가 여기에 표시</div>
+    
+    <h3>후위 연산자(변수이름++)</h3>
+    <p>현재 b 값 : <span id="후위B">5</span></p>
+    <button onclick="후위버튼()">b++ 실행</button>
+    <div id="후위결과">결과가 여기에 표시</div>
+
+
     <script src="../js/03_연산자.js"></script>
     <script src="../js/03_연산자_마이너스,곱하기,나누기.js"></script>
   </body>

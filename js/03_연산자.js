@@ -36,3 +36,46 @@ function minusFn() {
   const number2 = Number(document.getElementById("input2").value);
   document.getElementById("계산결과").innerText = number1 - number2;
 }
+
+const result2 = document.getElementById("result2");
+let count = 0;
+
+function 증가버튼() {
+  result2.innerText = ++count;
+}
+function 감소버튼() {
+  result2.innerText = --count;
+}
+let a = 5;
+let b = 5;
+function 전위버튼() {
+  let 원래값 = a;
+  let 결과 = ++a;
+  // textContent javascript에서 Html 요소의 텍스트 내용만 가져오고 설정하는 속성
+  // value를 사용할 때는 input이나 value로 값을 설정한 select와 같은 형태는 value 사용
+  // span과 같이 표시용 요소에는 textContent를 사용
+
+  document.getElementById("전위A").textContent = a;
+  document.getElementById("전위결과").innerHTML = `
+  <pre>
+ 원래 a값  : ${원래값} 
+ ++a의 결과: ${결과}
+ 현재 a의값: ${a}
+ -> 먼저 증가시킨 후 그 값을 반환
+ </pre>  
+ `;
+}
+function 후위버튼() {
+  let 원래값 = b;
+  let 결과 = b++;
+
+  document.getElementById("후위B").textContent = b;
+  document.getElementById("후위결과").innerHTML = `
+  <pre>
+ 원래 b값  : ${원래값} 
+ b++의 결과: ${결과}
+ 현재 b의값: ${b}
+ -> 먼저 반환 후 그 값을 증가
+ </pre>  
+ `;
+}
