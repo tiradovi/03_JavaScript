@@ -19,3 +19,30 @@ function check1(btn) {
     bgColor = btn.style.backgroundColor = "yellow";
   }
 }
+
+let count = 0;
+
+const test2 = document.getElementById("test2");
+/* 표준 이벤트 모델 작성법 */
+// 요소.addEventListener("이벤트 종류", 이벤트 핸들러(함수))
+test2.addEventListener("click", function () {
+  // 투명도 1 (불투명)-> 0(투명) 0.1씩 투명도 줄이기
+  let 현재 = test2.style.opacity; //현재 test2의 투명도 확인
+
+  // 맨 처음 투명도 ''일 경우  1 대입
+
+  if (현재 == "") {
+    test2.style.opacity = 1;
+    현재 = 1;
+  }
+
+  //투명도 0.1감소
+  test2.style.opacity = 현재 - 0.1;
+  if (test2.style.opacity < 0) {
+    test2.style.opacity = 1;
+  }
+  count++;
+  this.innerHTML = count;
+});
+
+/* 나중에 추가 기능이 필요한 경우 아이디 명칭으로 기능 추가 가능 */
