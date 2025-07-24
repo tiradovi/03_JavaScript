@@ -1,0 +1,132 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+h4 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.chat-bubble {
+  background: #f8f9fa;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 15px 0;
+  border-left: 4px solid #ff6b6b;
+  transition: all 0.3s ease;
+}
+
+.chat-bubble:hover {
+  transform: translateX(8px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.friend {
+  background: #ffe0e6;
+  border-left-color: #ff6b6b;
+}
+
+.me {
+  background: #e0f7fa;
+  border-left-color: #4ecdc4;
+}
+
+input[type="number"] {
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  padding: 15px;
+  font-size: 18px;
+  width: 80px;
+  text-align: center;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #ff6b6b;
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+  transform: scale(1.05);
+}
+
+button {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 18px 35px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 25px auto;
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(255, 107, 107, 0.6);
+}
+
+button:active {
+  transform: translateY(-1px) scale(1.02);
+}
+
+.emoji {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.ticket-input {
+  background: linear-gradient(145deg, #fff5f5, #f0f8ff);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+  border: 2px dashed #ff6b6b;
+}
+
+.movie-title {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: bold;
+  font-size: 18px;
+}

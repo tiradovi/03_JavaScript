@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch, Case, Defalut 실습 예제</title>
+    <link rel="stylesheet" href="../css/05_조건문_switch.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>계절 자판기</h2>
+      <p>월을 선택하면 해당하는 계절을 알려드립니다.</p>
+      <select id="monthSelect">
+        <option value="">월을 선택하세요.</option>
+        <option value="1">1월</option>
+        <option value="2">2월</option>
+        <option value="3">3월</option>
+        <option value="4">4월</option>
+        <option value="5">5월</option>
+        <option value="6">6월</option>
+        <option value="7">7월</option>
+        <option value="8">8월</option>
+        <option value="9">9월</option>
+        <option value="10">10월</option>
+        <option value="11">11월</option>
+        <option value="12">12월</option>
+      </select>
+      <button onclick="계절체크기능()">계절 확인</button>
+      <div id="seasonResult" class="result"></div>
+    </div>
+
+    <div class="container">
+      <h2>커피 자판기</h2>
+      <p>커피 종류를 선택하면 가격과 설명을 알려드립니다.</p>
+
+      <select id="coffeeSelect">
+        <option value="">커피를 선택하세요.</option>
+        <option value="americano">아메리카노</option>
+        <option value="latte">카페라떼</option>
+        <option value="cappuccino">카푸치노</option>
+        <option value="mocha">카페모카</option>
+        <option value="macchiato">마키아토</option>
+      </select>
+      <button onclick="커피주문기능()">주문하기</button>
+      <div id="coffeeResult" class="result"></div>
+    </div>
+    <script src="../js/05_조건문_switch.js"></script>
+  </body>
+</html>
