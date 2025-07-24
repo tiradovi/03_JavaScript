@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반복문</title>
+    <link rel="stylesheet" href="../css/04_반복문.css" />
+  </head>
+  <body>
+    <h1>for 문</h1>
+    <pre>
+        프로그램의 흐름을 제어하는 제어문 중 하나로 특정 코드를 반복할 때 사용
+
+        for는 끝이 정해져 있는 반복에서 주로 사용
+        
+        [작성법]
+        for([1]초기식; [조건식]; [4]증감식){
+            [3]조건식이 true인 경우 반복 수행할 코드;
+
+        }
+        //1~4 까지 1회 반복 후, 2~4 계속 반복
+        //조건식 false시 종료
+
+        초기식: for문 제어하는 용도의 변수 선언
+        
+        조건식: for문의 반복 여부 지정하는 식
+        -true일 때 반복, false일 때 종료
+        -보통 초기식에 사용된 변수를 이용해서 조건식을 작성
+        
+        증감식: 초기식의 사용된 값을 변환시키는 식
+
+    </pre>
+
+    <h1>while 문</h1>
+    <pre>
+        끝이 정확하게  정해져 있지 않은 반복에서 주로 사용
+    
+        [작성법]
+        while(조건식){
+            조건식이 true인 경우 반복 수행할 코드;
+        }
+        조건식이 true 인경우 내부코드 1회 반복후 다시 조건식 검사진행
+        false 전까지 무한 반복
+    </pre>
+    <script src="../js/04_반복문.js"></script>
+  </body>
+</html>

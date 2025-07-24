@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>While문 실습하기</title>
+    <link rel="stylesheet" href="../css/05_조건문_switch.css" />
+  </head>
+  <body>
+    <h1>while문 음식 주문</h1>
+    <p>메뉴를 선택하고 주문하기 버튼을 누르세요.</p>
+    <select name="" id="menuSelect">
+      <option value="">메뉴를 선택하세요</option>
+      <option value="1">피자 - 15,000원</option>
+      <option value="2">치킨 - 18,000원</option>
+      <option value="3">햄버거 - 8,000원</option>
+      <option value="4">음료 - 3,000원</option>
+    </select>
+    <div id="result"></div>
+
+    <button onclick="주문추가기능()">주문 추가</button>
+    <button onclick="주문완료기능()">주문 완료</button>
+    <button onclick="주문초기화기능()">주문 초기화</button>
+    <script src="../js/04_반복문_실습while.js"></script>
+  </body>
+</html>
