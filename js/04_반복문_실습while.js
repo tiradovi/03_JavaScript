@@ -58,3 +58,28 @@ function 주문초기화기능() {
   document.getElementById("result").innerHTML = "";
   document.getElementById("menuSelect").value = "";
 }
+
+function 비밀번호체크() {
+  let password = document.getElementById("비밀번호입력").value;
+  let 시도횟수 = 0;
+  let 결과메세지 = "";
+
+  /*
+  == 양 옆이 일치할 경우 true
+  != 양 옆이 일치하지 않으면 true
+  */
+  while (password != "1234") {
+    //비밀번호가 틀렸으면 다시 시도
+    //prompt(): 값을 입력할 수 있는 alert창과 같은 존재 : 값입력창, 확인 버튼, 취소 버튼 존재
+    password = prompt("비밀번호가 틀렸습니다. 다시입력하세요");
+
+    // 사용자가 비밀번호를 그만치고 싶어서
+    // 취소를 누를 경우
+    if (password == null) {
+      // 취소를 눌러서 아무값도 아닌경우
+      document.getElementById("결과창").innerHTML = "로그인이 취소되었습니다.";
+      return; //while 중단 가능
+    }
+  }
+  document.getElementById("결과창").innerText = "정답입니다.";
+}
