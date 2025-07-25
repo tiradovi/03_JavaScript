@@ -6,6 +6,12 @@ btn3.addEventListener("click", function () {
   box3.style.backgroundColor = input3.value;
 });
 
+input3.addEventListener("keyup", function (e) {
+  if (e.key == "Enter") {
+    box3.style.backgroundColor = input3.value;
+  }
+});
+
 const box4 = document.getElementById("box4");
 const input4 = document.getElementById("input4");
 const btn4 = document.getElementById("btn4");

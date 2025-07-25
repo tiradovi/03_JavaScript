@@ -1,0 +1,90 @@
+body {
+  font-family: "Malgun Gothic", sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #333;
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 10px;
+}
+
+pre {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+code {
+  background: #e8f5e8;
+  padding: 2px 5px;
+  border-radius: 3px;
+  font-family: "Courier New", monospace;
+}
+
+.예제1번클래스,
+.예제2번클래스,
+.예제3번클래스,
+.예제4번클래스 {
+  background: #fff;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.예제1번클래스 > div:first-child,
+.예제2번클래스 > div:first-child,
+.예제3번클래스 > div:first-child,
+.예제4번클래스 > div:first-child {
+  color: #007bff;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.실습클래스 {
+  background: #f1f3f4;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+input,
+button,
+select {
+  padding: 8px 12px;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.결과 {
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-family: monospace;
+  min-height: 20px;
+  white-space: pre-line; /* \n을 작동하기 위한 스타일 태그 */
+}
