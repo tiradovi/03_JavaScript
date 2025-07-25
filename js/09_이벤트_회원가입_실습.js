@@ -4,7 +4,7 @@ const passwordResult = document.getElementById("password-result");
 
 passwordConfirm.addEventListener("keyup", function (e) {
   if (e.key == "Enter") {
-    if (password.value.trim() || passwordConfirm.value.trim) {
+    if (password.value.trim() || passwordConfirm.value.trim()) {
       passwordResult.textContent = `비밀번호를 입력하세요`;
     } else if (password.value == passwordConfirm.value) {
       passwordResult.textContent = `비밀번호가 일치합니다!
