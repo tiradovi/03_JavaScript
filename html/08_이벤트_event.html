@@ -26,12 +26,12 @@
     <div class="예제1번클래스">
       <div>예제 1 : e와 event는 동일하다.</div>
       <pre>
-            function 클릭처리1(e){
-                console.log("e 사용 : ", e.type);
-            }
-            function 클릭처리2(event){
-                console.log("event 사용 : ", event.type);
-            }
+function 클릭처리1(e){
+    console.log("e 사용 : ", e.type);
+}
+function 클릭처리2(event){
+    console.log("event 사용 : ", event.type);
+}
       </pre>
       <div class="실습클래스">
         <button id="btn-e">e 사용버튼</button>
@@ -43,10 +43,10 @@
     <div class="예제2번클래스">
       <div>예제 2 : target 사용법</div>
       <pre>
-            function 타겟확인(e){
-                console.log("클릭된 요소 : ", e.target.tagName);
-                console.log("요소내용 : ", e.target.textContent);
-            }
+function 타겟확인(e){
+    console.log("클릭된 요소 : ", e.target.tagName);
+    console.log("요소내용 : ", e.target.textContent);
+}
     </pre
       >
       <div class="실습클래스">
@@ -59,6 +59,55 @@
           >스팬 요소</span
         >
         <div id="result2" class="결과">요소를 클릭하세요</div>
+      </div>
+    </div>
+
+    <div class="예제3번클래스">
+      <div>예제 3 : value 사용법</div>
+      <pre>
+function 값확인(e){
+    console.log("입력값 : ", e.target.value);
+    console.log("입력 타입 : ", e.target.type);
+}
+       </pre
+      >
+
+      <div class="실습클래스">
+        <input type="text" id="text-input" placeholder="텍스트 입력" />
+        <input type="number" id="number-input" placeholder="숫자 입력" />
+        <select
+          id="select-input"
+          name="추후 value값을 전달하기 위한 변수이름 설정"
+        >
+          <option value="">선택하세요</option>
+          <option value="옵션1">옵션1</option>
+          <option value="옵션2">옵션2</option>
+        </select>
+        <div id="result3" class="결과">입력하거나 선택해보세요</div>
+      </div>
+    </div>
+
+    <div class="예제4번클래스">
+      <div>예제 4 : 종합 활용</div>
+      <pre>
+function 로그인처리(e){
+    e.preventDefault(); //폼 제출 방지
+    const 사용자명 = document.getElementById("username").value;
+    const 비밀번호 = document.getElementById("password").value;
+
+    console.log("폼 제출 이벤트: " e.type);
+    console.log("제출      버튼: " e.target);
+    console.log("사  용  자  명: " 사용자명);
+}
+</pre
+      >
+      <div class="실습클래스">
+        <form action="#" id="login-form">
+          <input type="text" id="username" placeholder="사용자이름" required />
+          <input type="password" id="userPw" placeholder="비밀번호" required />
+          <button type="submit">로그인</button>
+        </form>
+        <div id="result4" class="결과">폼을 작성하고 로그인 버튼을 클릭</div>
       </div>
     </div>
     <script src="../js/08_이벤트_event.js"></script>
