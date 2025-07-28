@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>저녁 메뉴 선택하기</title>
+    <link rel="stylesheet" href="../css/17_저녁메뉴랜덤선택.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>저녁 메뉴 뽑기</h1>
+
+      <!-- TODO: 메뉴 추가 섹션 구현 -->
+      <div class="menu-input-section">
+        <h3>새로운 메뉴 추가</h3>
+        <!-- 입력 필드와 추가 버튼 -->
+        <div class="input-group">
+          <input
+            type="text"
+            id="menuInput"
+            placeholder="한글, 영어, 숫자 포함 메뉴 입력"
+          />
+          <button class="btn btn-add" id="addBtn">추가</button>
+        </div>
+        <!-- 유효성 검사 메시지 표시 영역 -->
+        <div class="validation-message" id="validationMessage"></div>
+      </div>
+
+      <!-- TODO: 결과 표시 섹션 -->
+      <div class="result-section">
+        <!-- 선택된 메뉴 표시 -->
+        <h3>오늘의 저녁 : <span id="menuResult">?</span></h3>
+        <!-- 뽑기 버튼 -->
+        <button class="btn btn-select" id="selectBtn">뽑기</button>
+      </div>
+
+      <!-- TODO: 현재 메뉴 목록 표시 -->
+      <div class="menu-list">
+        <!-- 메뉴 개수와 목록 표시 -->
+        <h4>현재 메뉴 목록 (<span id="menuCount">15</span>개)</h4>
+        <div class="menu-items" id="menuItems"></div>
+      </div>
+    </div>
+    <script src="../js/17_저녁메뉴랜덤선택.js"></script>
+  </body>
+</html>

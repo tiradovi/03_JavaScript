@@ -138,7 +138,7 @@ btn.addEventListener("click", (e) => {
     inputName.focus();
     return;
   }
-  // 회원가입 버튼을 클릭했을 때 성별 체크했는지 확인하도록 gender위치 ㅗ쩡
+  // 회원가입 버튼을 클릭했을 때 성별 체크했는지 확인하도록 gender위치 조정
   const gender = document.querySelector("[name='gender']:checked");
 
   if (gender == null) {
