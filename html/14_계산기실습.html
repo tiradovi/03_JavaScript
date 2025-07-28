@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>계산기 실습</title>
+    <link rel="stylesheet" href="../css/14_계산기실습.css" />
+</head>
+<body>
+    <h1>간단한 계산기</h1>
+    <div class="container">
+        <h2>숫자 계산하기</h2>
+        <div class="실습문제1">
+            <div>실습문제 1 : 계산기 만들기</div>
+            <div class="실습클래스">
+                <input type="number" id="num1" placeholder="첫 번째 숫자" />
+                <select id="operator">
+                    <option value="+">더하기 (+)</option>
+                    <option value="-">빼기 (-)</option>
+                    <option value="*">곱하기 (×)</option>
+                    <option value="/">나누기 (÷)</option>
+                </select>
+                <input type="number" id="num2" placeholder="두 번째 숫자" />
+                <button id="calculateBtn">계산하기</button>
+                <div id="calc-result" class="결과">
+                    숫자를 입력하고 계산하기 버튼을 클릭하세요.
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/14_계산기실습.js"></script>
+</body>
+</html>

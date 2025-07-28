@@ -3,7 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>25년 7월 24일 실습문제 풀어보기</title>
+    <link rel="stylesheet" href="../css/102_JS실습문제3.css" />
   </head>
-  <body></body>
+  <body>
+    <h1>JavaScript 이벤트 실습 문제</h1>
+    <div class="problem">
+      <h3>문제 1: 클릭할 때마다 색상 변경</h3>
+      <p>
+        박스를 클릭할 때마다 빨강 → 파랑 → 초록 → 노랑 → 빨강 순서로 색상이
+        변경되도록 하세요.
+      </p>
+      <div id="colorBox">클릭하세요!</div>
+    </div>
+
+    <div class="problem">
+      <h3>문제 2: 더블클릭으로 크기 변경</h3>
+      <p>
+        박스를 더블클릭할 때마다 크기가 100px → 150px → 200px → 100px 순서로
+        변경되도록 하세요.
+      </p>
+      <div id="sizeBox"></div>
+      <p>현재 크기: <span id="currentSize">100px</span></p>
+    </div>
+
+    <div class="problem">
+      <h3>문제 3: 키보드 입력과 실시간 표시</h3>
+      <p>
+        입력창에 텍스트를 입력하면 실시간으로 글자 수와 함께 표시되도록 하세요.
+        <br />
+        ESC 키를 누르면 입력창이 초기화되도록 하세요.
+      </p>
+      <div class="container3">
+        <input type="text" id="textInput" placeholder="텍스트를 입력하세요" />
+        <div id="display">글자 수: 0</div>
+      </div>
+    </div>
+
+    <div class="problem">
+      <h3>문제 4: 마우스 호버와 이미지 토글</h3>
+      <p>
+        박스에 마우스를 올리면 "숨김" 버튼이 나타나고, 버튼을 클릭하면 박스가
+        사라집니다. <br />
+        "다시 보기" 버튼을 클릭하면 박스가 다시 나타납니다.
+      </p>
+      <div class="image-container">
+        <div id="toggleImage">이미지 박스</div>
+        <button id="hideBtn" class="hidden">숨김</button>
+        <button id="showBtn" class="hidden">다시 보기</button>
+      </div>
+    </div>
+
+    <div class="problem">
+      <h3>문제 5: 폼 검증과 결과 표시</h3>
+      <p>
+        이름과 나이를 입력받아서, 올바른 형식인지 검증한 후 결과를 표시하세요.
+        <br />
+        - 이름: 2글자 이상, 한글만 허용 <br />
+        - 나이: 1~120 사이의 숫자
+      </p>
+      <div class="container5">
+        <div class="input-group">
+          <label>이름:</label>
+          <input type="text" id="nameInput" placeholder="홍길동" />
+          <label>나이:</label>
+          <input type="number" id="ageInput" placeholder="25" />
+          <button id="submitBtn">검증하기</button>
+        </div>
+        <div id="result">결과가 여기에 표시됩니다.</div>
+      </div>
+    </div>
+
+    <script src="../js/102_JS실습문제3.js"></script>
+  </body>
 </html>
