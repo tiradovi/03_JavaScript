@@ -1,0 +1,151 @@
+body {
+  font-family: "Malgun Gothic", sans-serif;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+h1 {
+  color: #2c3e50;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+pre {
+  background-color: #2d3748;
+  color: #e2e8f0;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.5;
+  border-left: 4px solid #3498db;
+}
+
+input[type="number"] {
+  padding: 10px 15px;
+  border: 2px solid #e1e5e9;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-right: 10px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 5px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+#btn1 {
+  background-color: #e74c3c;
+}
+
+#btn1:hover {
+  background-color: #c0392b;
+}
+
+#btn2a {
+  background-color: #f39c12;
+}
+
+#btn2a:hover {
+  background-color: #e67e22;
+}
+
+#btn2b {
+  background-color: #27ae60;
+}
+
+#btn2b:hover {
+  background-color: #229954;
+}
+
+#btn2c {
+  background-color: #8e44ad;
+}
+
+#btn2c:hover {
+  background-color: #7d3c98;
+}
+
+#btn3a {
+  background-color: #16a085;
+}
+
+#btn3a:hover {
+  background-color: #138d75;
+}
+
+.arrow {
+  background-color: #34495e;
+  margin: 8px 5px;
+  font-size: 13px;
+}
+
+.arrow:hover {
+  background-color: #2c3e50;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #bdc3c7, transparent);
+  margin: 30px 0;
+}
+
+h1[style*="color:red"] {
+  color: #e74c3c !important;
+  border-bottom-color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  input[type="number"] {
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+
+  pre {
+    font-size: 12px;
+    padding: 15px;
+  }
+}

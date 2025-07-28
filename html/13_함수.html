@@ -41,6 +41,73 @@
     </pre>
     <input type="number" id="input1" />
     <button id="btn1">확인하기</button>
+
+    <h1>return(반환)</h1>
+    <pre>
+        - 현재 수행중인 함수를 종료하고 호출한 곳으로 돌아감
+            -> 함수 호출 구조는 Stack 형식으로 되어있다.
+            -> FILO(First In Last Out)선입후출 구조
+        - 호출한 곳으로 돌아갈 때 return 옆에 작성된 값을 가지고 돌아갈 수 있다.
+        
+        ex) return 100; //호출한 곳으로 100을 가지고 돌아감
+
+        - 함수 마지막에 return 구문에 생략되어 있다면 자동으로 return; 구문 추가
+    </pre>
+    <button id="btn3a">return 확인하기1</button>
+
+    <hr />
+    <hr />
+    <hr />
+    <h1>익명 함수(이름이 없는 함수)</h1>
+    <pre>
+        [기본 함수]
+        function 함수이름(매개변수){
+            //함수 정의
+        }
+        함수이름(); 이름이 있으니 함수이름으로 호출 가능
+--------------------------------------------------------
+        [익명 함수]
+        function([매개변수]){
+            //함수정의
+        }
+        함수 이름이 없어서 단독 호출X
+
+        기본 함수와 다르게 변수에 대입, 매개변수로 바로 전달되어야 하는 상황에 주로사용
+        ex) 요소.addEventListener("click",function(){
+
+        })
+
+        ex) const 더하기 function(a,b){
+            return a+b;
+        }
+    </pre>
+    <hr />
+    <hr />
+    <hr />
+    <!-- 요즘 함수 작성 트렌드 -->
+    <h1 style="color: red">화살표 함수(Arrow function)</h1>
+    <pre>
+        - 익명 함수의 종류
+        - 간단히 표기 (ES6)
+
+        익명함수 : function(){}
+
+        1. 기본 형태 : () => {}
+        <!-- 매개변수 1개->()생략 가능 -->
+         2. 매개변수 1개 : (e) => {}, e => {}
+         3. 매개변수 n개 : (a,b,c) => {}
+         4. 함수 정의 부분에 return 한줄만 있을 경우 :
+            1) 익명 함수 :               function(){return 1+2;}
+            2) 화살표 함수:              ()=>{return 1+2;}
+            3) 화살표 함수(return 한줄)  ()=> 1+2
+        5. 함수 정의 부분에 return 한줄만 있는데 return이 object(객체,배열)인 경우
+            {return} 생략 불가 !!
+            () => {return {name : "홍길동", age:20}}
+    </pre>
+    <button class="arrow">화살표 함수 기본형태</button>
+    <button class="arrow">매개 변수가 1개인 경우</button>
+    <button class="arrow">return 한줄만 있을 경우</button>
+    <button class="arrow">return 한줄인데 object반환하는 경우</button>
     <script src="../js/13_함수.js"></script>
   </body>
 </html>

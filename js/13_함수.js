@@ -1,5 +1,6 @@
 const input1 = document.getElementById("input1");
 const btn1 = document.getElementById("btn1");
+const btn3a = document.getElementById("btn3a");
 
 //자주 사용하는 기능을 분리하여 기능명칭으로 사용 가능
 function print(num, str) {
@@ -32,4 +33,46 @@ btn1.addEventListener("click", function () {
 
   print(value, result); //순서 중요
   print(result, value);
+});
+
+btn3a.addEventListener("click", function () {
+  const numbers = [];
+  numbers[0] = 30;
+  numbers[2] = 10;
+  console.log(numbers);
+  //배열.push(값) : 배열의 마지막 요소로 값을 추가
+  numbers.push(30);
+  console.log(numbers);
+
+  numbers.push(pow(2, 4)); //== numbers.push(16);
+  console.log(numbers);
+});
+// pow : 전달받은 수를 x 제곱해서 반환하는 방식
+function pow(num, x) {
+  let = result = 1;
+  for (let i = 0; i < x; i++) {
+    result *= num;
+  }
+  return result;
+}
+
+const arrowList = document.querySelectorAll(".arrow");
+
+//기본형태
+arrowList[0].addEventListener("click", () => {
+  alert("화살표 함수 기본 형태 실습");
+});
+//매개 변수가 1개인 경우 =() 생략 가능
+arrowList[1].addEventListener("click", (e) => {
+  e.target.style.backgroundColor = "hotpink";
+});
+//return 한줄만 작성된 경우
+arrowList[2].addEventListener("click", (e) => {
+  const input1 = Number(prompt("첫 번째 값 "));
+  const input2 = Number(prompt("두 번째 값 "));
+
+  alert(input1 + input2);
+});
+arrowList[3].addEventListener("click", () => {
+  alert("화살표 함수 기본 형태 실습");
 });
