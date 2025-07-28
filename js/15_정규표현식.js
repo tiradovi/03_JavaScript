@@ -35,3 +35,5 @@ inputPhone.addEventListener("input", (e) => {
     phoneResult.classList.remove("check");
   }
 });
+
+
