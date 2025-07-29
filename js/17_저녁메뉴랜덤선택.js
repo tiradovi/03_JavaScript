@@ -86,6 +86,7 @@ classList: HTML 요소의 class 들을 개별적으로 관리, 하나씩 추가/
 
 menuInput.addEventListener("keyup", (e) => {
   if (e.type == "Enter") {
+    addBtn.click();
   }
 });
 
