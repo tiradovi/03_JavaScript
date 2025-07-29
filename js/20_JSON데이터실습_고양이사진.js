@@ -12,7 +12,7 @@ randomCat.addEventListener("click", () => {
       content.innerHTML = `
       id : ${data[0].id} <br>
       URL : ${data[0].url} <br>
-      <img src="${data[0].url}" alt="고양이" class="cat-image" >
+      <img src="${data[0].url}" alt="고양이" class="cat-image" />
       
       
       `;
