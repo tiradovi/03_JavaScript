@@ -40,6 +40,59 @@
     <button id="btn1">{} 객체 생성 + 다루기</button>
     <button id="btn2">method(메서드)</button>
 
+    <hr />
+    <h3>생성자(Constructor) 함수</h3>
+    <pre>
+        * 생성자란? (== 생성자 함수)
+        - 객체 생성 시 수행되는 기능(함수)
+
+        - 특정한 모양의 객체가 다수 필요한 경우
+            이를 만들기 위한 코드의 중복을 최소화
+            + 재사용성 증가
+        * new 연산자: (메모리에) 객체를 새롭게 생성
+
+        * 생성자 함수를 이용한 객체 생성 방법
+        -> const 객체명 = new 생성자함수();
+    </pre>
+    <button id="btn3">생성자 함수</button>
+    <hr />
+    <hr />
+    <hr />
+    <h1>JSON</h1>
+
+    <pre>
+        - JavaScript Object Notation
+        (자바 스크립트 객체 표기법)
+        - 자바스크립트 객체 모양으로 작성된 문자열(string)
+
+            -> string 은 모든 언어에서 공통적으로 지원하는 데이터 타입
+            -> 다른 프로그램과 데이터 교환시 string을 주로 사용
+                => 다량의 데이터를 가볍고 간단히 작성할 수 있는
+                string 모양으로 JS 객체를 활용
+
+            JS 객체 : {"멤버아이디": "user01", "멤버비밀번호":"pass01", "나이":20}
+            JSON :   '  {"멤버아이디": "user01", "멤버비밀번호":"pass01", "나이":20} '
+            - 간단한 포맷
+            괄호 {} 내에서 key : value 쌍으로 구성 {"key" : value}
+            key : 반드시 문자열 사용(쌍 따옴표("")표기 필수)
+            value : String, Boolean, Number, Array, Object, Null 데이터 저장
+
+            - 객체 {} 또는 배열[] 데이터를 효율적으로 표시가능
+            - 경량 데이터 교환 방식
+            - 간단한 포맷을 가지고 있어 이해하기 쉬움
+            - 순수 Text 기반
+            구조화된 TEXT 형식
+            대부분의 프로그래밍 언어에서 JSON 포맷 데이터를 핸들링 할 수 있는 
+            라이브러리를 시스템간 객체교환에 용이
+    </pre>
+    <h3>JS에서 제공하는 JSON 내장 객체</h3>
+    <pre>
+        -JSON (JS 객체 형태의 문자열)을 다루기 위한 객체 제공
+        -JSON.stringify(JS 객체) : JS객체 -> JSON 문자열로 변환
+        -JSON.pares (JSON문자열) :  JSON문자열 ->JS객체 
+    </pre>
+    <button id="btn4">JSON 확인</button>
+
     <script src="../js/18_JS객체.js"></script>
   </body>
 </html>
