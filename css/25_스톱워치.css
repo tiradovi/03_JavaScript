@@ -1,0 +1,91 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #1e1e1e;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 5px;
+  color: #f0f0f0;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.stopwatch {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 6rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.btn-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.btn-container button {
+  min-width: 120px;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-container button:hover {
+  opacity: 0.9;
+}
+
+.btn-container button:active {
+  transform: scale(0.98);
+}
+
+#startBtn {
+  background-color: #28a745;
+}
+
+#recordBtn {
+  background-color: #007bff;
+}
+
+#restBtn {
+  background-color: #dc3545;
+}
+
+#record-container {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 400px;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  transition: opacity 0.5s;
+}
+
+#record-container li {
+  padding: 10px 20px;
+  border-bottom: 1px solid #444;
+  font-size: 1.1rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#record-container li:last-child {
+  border-bottom: none;
+}

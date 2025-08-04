@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>스톱워치</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/25_스톱워치.css" />
+    <link rel="icon" type="image/png" href="../img/pumkin.png" />
+  </head>
+  <body>
+    <h1>STOP WATCH</h1>
+    <div id="display">
+      <!-- 시계(분:초.00) -->
+      <span>00</span> :
+      <!-- 분 -->
+      <span>00</span> .
+      <!-- 초 -->
+      <span>00</span>
+      <!-- 1/100초 -->
+    </div>
+    <div class="btn-container">
+      <button id="startBtn">시작</button>
+      <button id="recordBtn">기록</button>
+      <button id="resetBtn">리셋</button>
+    </div>
+    <ul id="record-container"></ul>
+    <script src="../js/25_스톱워치.js"></script>
+  </body>
+</html>
