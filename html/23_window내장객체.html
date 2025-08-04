@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>내장 객체</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/23_window내장객체.css" />
+    <link rel="icon" type="image/png" href="../img/pumkin.png" />
+  </head>
+  <body>
+    <h1>window 내장 객체</h1>
+
+    <div class="container">
+      팝업창에서 읽어 갈 값 : <input type="text" id="readValue" />
+      <button id="open_24popUP">팝업창(자식)열기</button>
+      <hr />
+      팝업창에서 작성한 값 : <input type="text" id="writeValue" />
+    </div>
+
+    <pre>
+        - 브라우저 창 자체를 나타내는 객체
+        - 자바스크립트 모든 객체의 최상위 부모
+
+        - window의 자식 객체
+                1) DOM : document (브라우저에서 내용 출력 부분)
+                2) BOM : location, history, screen, navigator(DOM제외 나머지 부분=기능부분)
+    </pre>
+    <hr />
+    <pre>
+        [window].alert("문자열") : 확인 버튼만 존재
+        [window].prompt("문자열") : alert + 텍스트 입력 가능
+        [window].confirm("문자열") : 확인, 취소 버튼 존재
+    </pre>
+    <hr />
+    <h1>시간 지연 함수</h1>
+    <pre>
+        -window에서 제공하는 시간 관련 함수들은 모두 비동기로 동작
+
+        동기 : 앞에 코드 수행 종료시 다음 코드 수행
+        비동기: 코드 작업이 순서대로 수행되지 않고 여러작업 동시 수행
+                -> 먼저 읽은 코드가 수행이 완료되는 것을 기다리지 않고 바로 다음 코드를 수행하는 것
+    </pre>
+    <h3>[window].setTimeout(함수, 지연시간(ms))</h3>
+    <pre>
+        - 지연 시간이 지난 후 함수를 1회만 수행하는 window 내장객체 함수
+            타이머(시간이 지정된)
+    </pre>
+    <h3>[window].setInterval(함수, 지연시간(ms))</h3>
+    <pre>
+        - 지연 시간이 지날 때 마다 함수를 계속 수행하는 window 내장객체 함수
+            타이머(시간이 지정된)
+    </pre>
+    <h3>[window].clearInterval(setInterval())</h3>
+    <pre>
+        - setInterval()로 인해 생성된 인터벌을 삭제하는 함수
+    </pre>
+
+    <h2>window.open("URL", "팝업창 이름", "팝업창 특성(옵션)")</h2>
+    <pre>
+    url : 새 창에서 요청할 url
+    팝업창 이름 : 사용자 임의 지정 새창 이름지정
+        _blank : 새 탭 또는 새 창(기본값)
+        _self  : 현재 탭 또는 현재 창
+        _parent: 부모페이지
+        _top   : 최상위페이지
+    팝업창 특성 : 
+        popup : 최소한의 팝업창 사용
+        width or innerWidth : 스크롤 막대를 포함하여 콘텐츠 영역의 가로 너비 지정 최소 필수값100
+        height or innerHeight : 스크롤 막대를 포함하여 콘텐츠 영역의 세로 너비 지정 최소 필수값100
+    </pre>
+
+    <script src="../js/23_window내장객체.js"></script>
+  </body>
+</html>

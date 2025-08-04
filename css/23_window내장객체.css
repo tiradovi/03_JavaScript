@@ -1,0 +1,81 @@
+body {
+  font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.7;
+  padding: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+h1,
+h2,
+h3 {
+  color: #0056b3;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h3 {
+  border-left: 4px solid #007bff;
+  padding-left: 10px;
+  font-size: 1.2em;
+}
+
+pre {
+  background-color: #e9ecef;
+  padding: 15px;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 0.95em;
+  border: 1px solid #dee2e6;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 40px 0;
+}
+
+#open_24popUp {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 25px;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#open_24popUp:hover {
+  background-color: #0056b3;
+}
+
+.container {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.container input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.container hr {
+  margin: 20px 0;
+}

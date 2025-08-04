@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/22_DOM.css" />
+    <link rel="icon" type="image/png" href="../img/pumkin.png" />
+  </head>
+  <body>
+    <h1>DOM(Document Object Model)</h1>
+    <pre>
+        HTML(웹문서, 웹페이지) 문서를 객체 기반으로 표현한 것
+        -> HTML 문서에 작성된 내용을 트리구조로 나타냈을 때
+           각각의 태그, TEXT, COMMENT를 Node라고 한다. 
+
+            *node : document(문서) 트리구조를 구성하는 모든 개별 요소를 가리키는 기본단위
+                -> HTML 태그 div p 등
+                    태그안에 텍스트(글자)
+                    주석
+                    코드에 작성된 모든 내용은 각각의 node라고 불림
+                    노드 내부에서 태그와 요소로 분리됨
+
+                    nodeJS: 프론트엔드 코드로 작성되는 모든 것에 대한 JavaScript 설정을 나타냄
+                    nodeJS로 백엔드 구성이 가능한 사람: JS 언어기반 백엔드 기술자
+                    nodeJS로 프론트엔드 구성이 가능한 사람: JS 언어기반 프론트엔드 기술자
+                        (* 기술 도구는 nodejs를 활용하지만 언어의 요구사항이 ts일 수 있음)
+
+        document :{
+            DOCTYPE : html,
+            HTML : {
+                HEAD :{
+                    TITLE : {TEXT : "문서 제목"},
+                    STYLE : {...},
+                    META  : {...},
+                },
+                BODY :{
+                    H1 : {TEXT : "제목", ATTRIBUTE : "속성"},
+                    COMMENT : {TEXT : "주석 내용"},
+                    DIV : {...}
+
+                    ul#test{childNodes : [], innerText: 123,}
+                }      
+        }}
+    </pre>
+
+    <script src="../js/22_DOM.js"></script>
+  </body>
+</html>
