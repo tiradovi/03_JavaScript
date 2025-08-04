@@ -1,0 +1,31 @@
+body {
+  padding: 20px;
+  font-family: "Malgun Gothic", "맑은 고딕", sans-serif;
+  background-color: #f8f9fa;
+}
+
+.container {
+  text-align: center;
+  color: #333;
+}
+
+#childInput {
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  margin: 0 10px;
+}
+
+#send {
+  padding: 8px 15px;
+  color: white;
+  background-color: #28a745;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#send:hover {
+  background-color: #218838;
+}
