@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/29_Crawling_Scraping.css" />
+    <link rel="icon" type="image/png" href="../img/pumkin.png" />
+  </head>
+  <body>
+    <h1>웹 크롤링(Web Crawling)</h1>
+    <pre>
+      인터넷상의 웹페이지들을 자동으로 방문하고 탐색하여 데이터를 수집하는 과정
+      보통 스크래핑 대신 크롤링으로 부름
+    </pre>
+    <h1>웹 스크래핑(Web Scraping)</h1>
+    <pre>
+      특정 페이지의 데이터를 추출하는 과정
+    </pre>
+    <h3>크롤링 진행하는 방법</h3>
+    <pre>
+      javaScript나 python 언어를 활용하여 진행
+      javaScript nodeJs 설치 후 데이터 수집 가능
+        1. nodeJs 설치 <a href="https://nodejs.org/ko/download"></a>
+        2. 필요한 패키지 기능 설치
+          필요한 패키지 설치 이유: js 개발자가 만든 기능이 아닌 js를 활용한 외부
+          회사나 개발자의 기능을 사용하기 때문
+
+          사용법: 코딩 컴퓨터에 nodeJs 설치후
+            npm i 필요한패키지이름
+            npm install 필요한패키지이름
+
+            설치한 패키지 삭제방법
+            npm uninstall 필요한패키지이름
+    </pre>
+
+    <h2>node.Js</h2>
+    <pre>
+  javaScript를 웹사이트 밖에서도 실행가능하게 해주는 런타임 환경
+  기존에서는 웹사이트에서만 사용가능
+  node.js는 컴퓨터에서 인터넷 없이 사용가능
+
+  2008-2009년 당시에는 js는 웹브라우저에서만
+  백엔드는 JAVA,PHP,python과 같은 언어만 사용가능
+
+  라이언 달 : 파일 업로드 진행률을 보여주는 웹앱 만드는 도중
+              서버에 파일 업로드 상태를 실시간 확인이 어려웠음
+              js-> 비동기 , 이벤트기반 -> 백엔드로 쓴다면?
+    node.js로 인하여 채팅, 게임 개발이 용이 해짐
+
+  ex) 서버 생성, 파일 다루기, 데이터베이스 연결 가능
+    </pre>
+
+    <h2>npm</h2>
+    <pre>
+  Node Package Manager의 줄임말
+  Nodejs 용 패키지 관리도구
+  다른 개발자들이 만든 코드 쉽게 설치 관리 가능
+  https://www.npmjs.com/
+    </pre>
+
+    <h3>nodejs & npm으로 패키지 설치 및 실행법</h3>
+    <pre>
+      // Nodejs로 js 파일 실행
+      Node 파일이름.js // js 파일 실행
+
+      //npm으로 패키지 설치
+      npm install express // 웹 서버를 만드는 패키지
+      npm install axios // HTML 요청보내는 패키지 ajax와 동일한 기능
+      npm install cheerio // HTML 변환하는 패키지
+    </pre>
+    <script src="../js/29_Crawling_Scraping.js"></script>
+  </body>
+</html>
