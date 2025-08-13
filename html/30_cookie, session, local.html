@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/30_cookie, session, local.css" />
+    <link rel="icon" type="image/png" href="../img/logo.png" />
+  </head>
+  <body>
+    <h1>웹 스토리지 - 쿠키, 세션, 로컬</h1>
+    <div class="storage-box">
+      <h2>쿠키(cookie)</h2>
+      <div class="info">
+        서버와 주고 받는 작은 데이터 로그인 정보 저장에 많이 사용 -> 직접적으로
+        로그인 정보를 저장하는 것이 아니라 로그인을 할 수 있는 토큰(=인증키)를
+        저장 후 로그인 정보를 가져올 수 있도록 설정
+      </div>
+    </div>
+    <div class="storage-box">
+      <h2>세션(session)</h2>
+      <div class="info">
+        탭을 닫으면 사라지는 데이터, 임시 저장용으로 많이 사용 로그인 정보
+        저장에 많이 사용 -> 쿠키처럼 토큰(=인증키) 저장하는 방식이 아닌,
+        아이디와 같은 정보를 인식하여 탭을 닫거나, 특정 시간이 만료되면 세션에
+        저장되어 있는 정보를 자동 삭제
+      </div>
+    </div>
+    <div class="storage-box">
+      <h2>로컬(local)</h2>
+      <div class="info">
+        브라우저를 닫아도 남아있는 데이터, 설정값 저장에 사용 즐겨찾기 와 같은
+        용도로 많은 사용
+      </div>
+    </div>
+    <div class="storage-box">
+      <h2>비교표</h2>
+      <table>
+        <tr>
+          <th>특징</th>
+          <th>쿠키</th>
+          <th>세션</th>
+          <th>로컬</th>
+        </tr>
+        <tr>
+          <td>용량<br />KB < MB</td>
+          <td>4KB</td>
+          <td colspan="2">5MB</td>
+        </tr>
+        <tr>
+          <td>수명</td>
+          <td>설정한 시간까지</td>
+          <td>탭 닫을 때까지<br />설정한 시간까지</td>
+          <td>직접 삭제할 때까지</td>
+        </tr>
+        <tr>
+          <td>서버 전송</td>
+          <td>자동 전송</td>
+          <td colspan="2">
+            전송 안됨<br />
+            (JS로 전송 기능 작성하면 전송가능)
+          </td>
+        </tr>
+      </table>
+    </div>
+    <script src="../js/30_cookie, session, local.js"></script>
+  </body>
+</html>

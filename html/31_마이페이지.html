@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마이페이지</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/31_회원가입,로그인,마이페이지.css" />
+    <link rel="icon" type="image/png" href="../img/logo.png" />
+  </head>
+  <body>
+    <div id="mypage-container">
+      <h1>마이 페이지</h1>
+      <div id="user-info">
+        <p><strong>이름 : </strong><span id="user-name"></span></p>
+        <p><strong>이메일 : </strong><span id="user-email"></span></p>
+        <p><strong>로그인 유효 시간: </strong><span id="timer">60초</span></p>
+      </div>
+      <button id="logout-btn">로그아웃</button>
+    </div>
+    <script src="../js/31_마이페이지.js"></script>
+  </body>
+</html>
